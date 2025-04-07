@@ -135,3 +135,59 @@ receivers:
         channel: '#alerts-channel'
         send_resolved: true
 ```
+
+Configures Slack as the alert receiver. send_resolved: true allows resolved alerts to also notify.
+
+
+## Testing the System
+1.Run All Services
+
+
+## Start Prometheus
+```language
+./prometheus --config.file=prometheus.yml
+```
+
+![image_alt]()
+
+
+## Start Node Exporter
+```language
+./node_exporter
+```
+
+![image_alt]()
+
+
+## Start Alertmanager
+```language
+./alertmanager --config.file=alertmanager.yml
+```
+![image_alt]()
+
+
+## Start Custom App
+```language
+python app.py
+```
+![image_alt]()
+
+
+2.
+## Access Grafana Dashboard
+2.1.Visit `http://localhost:3000`
+
+2.2.Import or build dashboards using Prometheus as data source
+
+2.3.Monitor CPU, memory, custom metrics
+
+![image_alt]()
+
+
+
+3.Stress Test the CPU
+```language
+sudo apt install stress
+stress --cpu 4 --timeout 60
+```
+This simulates high CPU usage. Within 10–30 seconds, you should receive a Slack alert if thresholds are set correctly.
