@@ -1,0 +1,23 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'slack-notifications'
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: 'slack-notifications'
+    slack_configs:
+      - api_url: 'https://hooks.slack.com/services/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'
+        channel: '#all-tatenda'
+        send_resolved: true
+        text: |
+          {{ range .Alerts }}
+          *🔥 Alert:* {{ .Annotations.summary }}
+          *📄 Description:* {{ .Annotations.description }}
+          *📌 Status:* {{ .Status }}
+          *🖥️ Instance:* {{ .Labels.instance }}
+          *⏱️ Time:* {{ .StartsAt }}
+          {{ end }}

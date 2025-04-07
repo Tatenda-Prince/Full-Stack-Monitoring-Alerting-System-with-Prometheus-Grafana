@@ -71,3 +71,67 @@ A Cloud/DevOps team needs real-time insights into server and application health.
 
 
 ## Explanation of YAML Files
+1.prometheus.yml
+```language
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['localhost:9100']
+
+  - job_name: 'my_app'
+    static_configs:
+      - targets: ['localhost:8000']
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['localhost:9093']
+
+rule_files:
+  - "alerts.yml"
+
+```
+Configures targets to scrape metrics from Prometheus, Node Exporter, and a custom app. Links alert rules and Alertmanager.
+
+
+2.alerts.yml
+```language
+groups:
+  - name: cpu-alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[1m])) * 100) > 5
+        for: 10s
+        labels:
+          severity: critical
+        annotations:
+          summary: "🚨 High CPU usage detected on {{ $labels.instance }}"
+          description: "CPU usage is above 5% for more than 10 seconds."
+```
+Defines the alert condition. This one fires when CPU usage >5% for more than 10 seconds.
+
+3.alertmanager.yml
+```language
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'slack-notifications'
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: 'slack-notifications'
+    slack_configs:
+      - api_url: 'https://hooks.slack.com/services/XXXX/XXXX/XXXX'
+        channel: '#alerts-channel'
+        send_resolved: true
+```
