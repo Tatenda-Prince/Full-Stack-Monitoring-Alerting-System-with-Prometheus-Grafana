@@ -181,7 +181,7 @@ python app.py
 
 2.3.Monitor CPU, memory, custom metrics
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/578df2256b7f016b4b83788d3218dff288ae2444/screenshots/Screenshot%202025-04-07%20140034.png)
 
 
 ## Stress Test the CPU
