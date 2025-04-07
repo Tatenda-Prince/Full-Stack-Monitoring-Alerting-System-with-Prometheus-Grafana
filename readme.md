@@ -164,7 +164,7 @@ Configures Slack as the alert receiver. send_resolved: true allows resolved aler
 ```language
 ./alertmanager --config.file=alertmanager.yml
 ```
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/50abb3a82ae98e9e4713261440112bd931f520e7/screenshots/Screenshot%202025-04-07%20133746.png)
 
 
 ## Start Custom App
