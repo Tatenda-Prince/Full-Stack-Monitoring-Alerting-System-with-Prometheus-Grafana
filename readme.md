@@ -192,6 +192,11 @@ This simulates high CPU usage. Within 10–30 seconds, you should receive a Slac
 
 ![image_alt]()
 
+2.4.Check for messages in your slack 
+
+![image_alt]()
+
+
 
 ## Future Enhancements
 1.Add email/SMS/Discord notifications
