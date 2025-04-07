@@ -191,7 +191,7 @@ stress --cpu 4 --timeout 60
 ```
 This simulates high CPU usage. Within 10–30 seconds, you should receive a Slack alert if thresholds are set correctly.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/922c7a62fb3956e06010832a00d3c9004282835f/screenshots/Screenshot%202025-04-07%20131651.png)
 
 2.4.Check for messages in your slack 
 
