@@ -1,5 +1,6 @@
 # Real-Time Monitoring and Alerting System with Prometheus, Grafana & Alertmanager
-![image_alt]()
+
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/4dd3804c5c8312ca2bafec5503e73761ff412ed1/screenshots/Screenshot%202025-04-07%20171753.png)
 
 ## Project Overview
 This project implements a full-stack, real-time monitoring and alerting system using Prometheus, Grafana, Node Exporter, Alertmanager, and a custom Python application. It collects, stores, visualizes, and alerts based on system and application metrics, enabling engineers to proactively respond to anomalies.
