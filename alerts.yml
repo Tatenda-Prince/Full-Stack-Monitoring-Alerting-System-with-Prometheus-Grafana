@@ -7,5 +7,5 @@ groups:
         labels:
           severity: critical
         annotations:
-          summary: "🚨 High CPU usage detected on {{ $labels.instance }}"
+          summary: "High CPU usage detected on {{ $labels.instance }}"
           description: "CPU usage is above 5% for more than 10 seconds."

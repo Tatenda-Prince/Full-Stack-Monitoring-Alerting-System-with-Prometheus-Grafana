@@ -10,7 +10,7 @@ route:
 receivers:
   - name: 'slack-notifications'
     slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: 'https://hooks.slack.com/services/XXXX/XXXX/XXXX' #Your Slack webhook URLs
         channel: '#all-tatenda'
         send_resolved: true
         text: |
