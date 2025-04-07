@@ -149,7 +149,7 @@ Configures Slack as the alert receiver. send_resolved: true allows resolved aler
 ./prometheus --config.file=prometheus.yml
 ```
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/5878f7ac217ed9e397ae5a9070081b86cc3c09d5/screenshots/Screenshot%202025-04-07%20124918.png)
 
 
 ## Start Node Exporter
