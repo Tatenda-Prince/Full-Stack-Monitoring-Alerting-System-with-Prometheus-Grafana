@@ -173,7 +173,6 @@ python app.py
 ![image_alt]()
 
 
-2.
 ## Access Grafana Dashboard
 2.1.Visit `http://localhost:3000`
 
@@ -184,10 +183,36 @@ python app.py
 ![image_alt]()
 
 
-
-3.Stress Test the CPU
+## Stress Test the CPU
 ```language
 sudo apt install stress
 stress --cpu 4 --timeout 60
 ```
 This simulates high CPU usage. Within 10–30 seconds, you should receive a Slack alert if thresholds are set correctly.
+
+![image_alt]()
+
+
+## Future Enhancements
+1.Add email/SMS/Discord notifications
+
+2.Integrate auto-scaling or healing via webhook when alerts fire
+
+3.Export metrics to S3 for long-term analysis
+
+4.Add anomaly detection using ML (e.g., Amazon Lookout for Metrics)
+
+5.Create dashboards for disk, memory, and application error rates
+
+## What I Learned
+1.How to design and build a real-time alerting pipeline
+
+2.How Prometheus and Grafana integrate for observability
+
+3.Creating and exposing custom application metrics
+
+4.Writing effective alert rules and testing them
+
+5.Real-world skills for monitoring, incident response, and DevOps best practices
+
+
