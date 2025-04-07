@@ -171,7 +171,7 @@ Configures Slack as the alert receiver. send_resolved: true allows resolved aler
 ```language
 python app.py
 ```
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/1b28b4f33df2861562b87ec70017dc7011450490/screenshots/Screenshot%202025-04-07%20124904.png)
 
 
 ## Access Grafana Dashboard
