@@ -195,7 +195,7 @@ This simulates high CPU usage. Within 10–30 seconds, you should receive a Slac
 
 2.4.Check for messages in your slack 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Full-Stack-Monitoring-Alerting-System-with-Prometheus-Grafana/blob/bc2027544eb80810911955523cff5ce6577f1720/screenshots/Screenshot%202025-04-07%20135017.png)
 
 
 
